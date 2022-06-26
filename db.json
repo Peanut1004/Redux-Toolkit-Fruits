@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "image": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FY2P6xpkg%2FHaitian-Mango-8ct.jpg&w=640&q=75",
+      "title": "Mango",
+      "price": "12",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "image": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FpXK9cjq7%2Fanaros-pineapple-1-pcs.webp&w=640&q=75",
+      "title": "Pineapple",
+      "price": 18
+    },
+    {
+      "id": 3,
+      "image": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FRhWczY1N%2FCranberries-Package-9-5-oz.jpg&w=640&q=75",
+      "title": "Pomegranates",
+      "price": 11
+    },
+    {
+      "image": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FL8L3XGcP%2FBlackberries-1-25-qt.jpg&w=256&q=75",
+      "title": "Blueberry",
+      "price": "55",
+      "id": 4
+    }
+  ]
+}
