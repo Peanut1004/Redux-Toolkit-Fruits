@@ -1,0 +1,71 @@
+/*cart-table*/
+.cart-wrap {
+  margin-top: 30px;
+}
+
+tbody,
+th,
+td {
+  border: 1px solid #878383;
+}
+
+.table-cart thead {
+  background-color: #4a8546;
+}
+
+.table-cart thead tr th {
+  padding: 15px 0;
+}
+
+.table-cart thead tr th.image {
+  width: 6%;
+}
+
+.table-cart thead tr th.title {
+  width: 30%;
+}
+
+.table-cart tbody tr > td {
+  padding: 5px;
+  text-align: center;
+}
+
+.table-cart tbody tr td:nth-child(4) button {
+  width: 20px;
+  text-align: center;
+  padding: 0;
+}
+
+.table-cart tbody tr td:nth-child(4) input {
+  width: 36px;
+  background: none;
+  -webkit-appearance: none;
+}
+
+.table-cart tbody tr td img {
+  width: 100%;
+}
+
+.total {
+  width: 100%;
+  margin: 10px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-cart {
+  text-align: center;
+}
+
+.btn-cart-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-cart-bottom button {
+  width: unset;
+}
+
+.clear-cart-all {
+  margin-right: 10px;
+}

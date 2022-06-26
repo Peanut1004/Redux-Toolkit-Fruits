@@ -3,9 +3,11 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../slice/userSlice";
+import { BsCartCheck } from "react-icons/bs";
 
 function Header() {
   const [open, setOpen] = useState(true);
+  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -14,46 +16,41 @@ function Header() {
     navigate("/");
   };
 
-  const amountTotal = useSelector((state) => state.products.amountTotal);
   const { isLoggedIn } = useSelector((state) => state.users);
 
+  // const { isLoggedIn } = useSelector((state) => state.users);
+  const amountTotal = useSelector((state) => state.products.amountTotal);
   const nameUser = JSON.parse(localStorage.getItem("nameUser"));
 
   return (
-    <div className="header ">
+    <div className="header">
       <div className="logo">
-        <Link to="/">Steam</Link>
+        <Link to="/">Fruits</Link>
       </div>
-      <nav className="menu">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/cart" className="cart-link">
-              Cart<span>{amountTotal}</span>
-            </Link>
-          </li>
-          {!isLoggedIn && (
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          )}
-        </ul>
-        {isLoggedIn && (
-          <div className="user-name" onClick={() => setOpen(!open)}>
-            Hi! {nameUser}
-          </div>
-        )}
-      </nav>
-      {isLoggedIn && !open && (
+      <div className="search">
+        <input
+          type="text"
+          value={search}
+          placeholder="Search for products (e.g. fish, apple, oil)"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+
+      <div className="cart">
+        <Link to="/cart">
+          <BsCartCheck />
+        </Link>
+        <span className="cart-number">{amountTotal}</span>
+      </div>
+
+      {/* {isLoggedIn && !open && (
         <div className="info-user">
           <div>
             <Link to="/changePassword">Change Password</Link>
           </div>
           <div onClick={() => handleLogout()}>Logout</div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

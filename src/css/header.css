@@ -1,0 +1,43 @@
+/*header*/
+.header {
+  background-color: #119744;
+  padding: 20px 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header .logo a {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.header .search input {
+  border-radius: 10px;
+}
+
+.header .cart {
+  margin-left: auto;
+  margin-right: 20px;
+  position: relative;
+}
+
+.header .cart .cart-number {
+  top: -7px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  border-radius: 50%;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+}
+
+.header .cart svg {
+  font-size: 22px;
+  color: #fff;
+}

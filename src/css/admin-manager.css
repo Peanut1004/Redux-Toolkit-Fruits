@@ -1,0 +1,57 @@
+/*admin-manager*/
+.admin-manager {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.admin-manager .add-product {
+  width: unset;
+  margin-bottom: 10px;
+}
+
+.table-admin thead {
+  background-color: #4a8546;
+}
+
+.table-admin thead tr th {
+  padding: 15px 0;
+}
+
+.table-admin tbody tr > td {
+  text-align: center;
+}
+
+.table-admin {
+  width: 100%;
+}
+
+.table-admin thead tr > th {
+  width: 6%;
+}
+
+.table-admin tbody tr td img {
+  width: 30%;
+}
+
+.admin-action {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-action button {
+  width: unset;
+  margin: 0 4px;
+}
+
+/*form-add-edit*/
+.form-add-edit {
+  background-color: #bbbbbb;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}

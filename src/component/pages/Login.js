@@ -1,17 +1,13 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { loginUser, registerUser } from "../../slice/login-register";
-import { useLocation, useNavigate } from "react-router-dom";
-import FormRow from "./FormRow";
+import { useNavigate } from "react-router-dom";
+import FormRow from "../partials/FormRow";
 
 function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  // let { userName } = useSelector((state) => state.users);
-  let userNameLocal = JSON.parse(localStorage.getItem("userName"));
-  console.log(userNameLocal);
 
   const initialState = {
     name: "",
@@ -32,19 +28,15 @@ function Login() {
     setValue({ ...values, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, isMember } = values;
     if (!email || !password || (!isMember && !name)) {
       toast.error("Please Fill Out All Fields");
-      return;
     } else if (isMember) {
       dispatch(loginUser({ email, password, returnSecureToken: true }));
-      if (userNameLocal) {
-        toast.success("Login success");
-        navigate("/");
-      }
-      return;
+      toast.success("Login success");
+      navigate("/");
     } else {
       dispatch(
         registerUser({ name, email, password, returnSecureToken: true })

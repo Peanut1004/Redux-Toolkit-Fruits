@@ -1,0 +1,55 @@
+/*topbar*/
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.topbar-left {
+  font-size: 1em;
+  color: #000;
+}
+
+.topbar-left a {
+  font-size: 1em;
+  color: #119744;
+  font-weight: 700;
+}
+
+.topbar-right li {
+  display: inline-block;
+}
+
+.topbar-right li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.topbar-right li {
+  margin-left: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.topbar-right li:before {
+  content: "";
+  width: 1px;
+  height: 1em;
+  background-color: #000;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.topbar-right li:first-child:before {
+  display: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.topbar-right li a svg {
+  margin-top: 2px;
+}

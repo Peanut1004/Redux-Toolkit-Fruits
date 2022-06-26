@@ -10,13 +10,12 @@ const userSlice = createSlice({
   reducers: {
     login(state, action) {
       const { token, name } = action.payload;
+
       localStorage.setItem("token", JSON.stringify(token));
       localStorage.setItem("nameUser", JSON.stringify(name));
-      let getTokenLocal = JSON.parse(localStorage.getItem("token"));
-      let getUserNameLocal = JSON.parse(localStorage.getItem("userName"));
 
-      state.token = getTokenLocal;
-      state.nameUser = getUserNameLocal;
+      state.token = token;
+      state.nameUser = name;
 
       state.isLoggedIn = true;
     },

@@ -1,0 +1,38 @@
+/*menu*/
+.menu {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  border-bottom: 1px solid #d2cdcd;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+}
+
+.menu ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.cart-link span {
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  border-radius: 50%;
+  color: #000;
+  display: inline-block;
+  text-align: center;
+  background-color: #fff;
+  top: -4px;
+  right: -7px;
+  position: absolute;
+}
